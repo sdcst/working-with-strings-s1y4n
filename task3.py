@@ -17,8 +17,14 @@ def split(input):
     return
     str new string with line break in the middle
     '''
+    num = int(len(input)/2)
 
-    return
+    if input[num-1] != " " and input[num] != " ":
+        modifiedString = input[:num] + "-\n" + input[num:]
+    else:
+        modifiedString = input[:num] + "\n" + input[num:]
+    return modifiedString
+
 
 if __name__ == "__main__":
     sentence = "There is a big balloon in the blue sky"
